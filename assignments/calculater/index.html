@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>You can performe operations like "+" "-" "*" "/" and "%"</p>
+
+<input id="myInput" type="text">
+
+<button onclick="myFunction()">Click Heare</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var input = document.getElementById("myInput").value;
+  var result;
+  
+  ////// operations
+  // var input = "1000 + 1000"
+
+    opp = input.indexOf("+");
+    sym = input.charAt(5);
+
+    array = input.split("+");
+
+
+    var array1 = array[0];
+    var array2 = array[1];
+
+    num1 = array1.trim();
+    num2 = array2.trim();
+
+  //////////////////////////
+
+  console.log(input.length[1]);
+
+  // If the letter is "+"
+  if (input === "+") {
+    result = num1 + num2;
+    
+  // If the letter is "-" 
+  } else if (input === "-") {
+    result = num1 - num2;
+  
+
+  // If the letter is "*" 
+} else if (input === "-") {
+  result = num1 * num2;
+  
+
+  // If the letter is "/" 
+} else if (input === "/") {
+  result = num1 / num2;
+  
+
+  // If the letter is "%" 
+} else if (input === "%") {
+  result = num1 % num2;
+  
+    
+  // If the letter is anything else
+  } else {
+    result = "Input is not valid";
+  }
+  document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

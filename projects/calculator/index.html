@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="inputbox"> 
+            <button onclick="clearInput()">CL</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="calculatePercentage()">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('*')">*</button>
+
+            <button onclick="display('6')">6</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('-')">-</button>
+
+            <button onclick="display('3')">3</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('+')">+</button>
+
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calculate()">=</button>
+            <!-- <button onclick="display('*')">/</button> -->
+        </div>
+    </div>
+
+    <script>
+
+        let output = document.getElementById('inputbox')
+
+        function display(num){
+            output.value += num;
+
+        }
+
+        function calculate(){
+            try{
+                output.value = eval(output.value)
+            }
+            catch(error){
+                    alert('invalid')
+            }
+
+    //         try {
+    //     // Check if the expression contains '%'
+    //         if (output.value.includes('%')) {
+    //         // Split the expression into two parts: value and percentage
+    //         let parts = output.value.split('%');
+
+    //         // Parse the value and percentage
+    //         let value = parseFloat(parts[0]);
+    //         let percentage = parseFloat(parts[1]);
+
+    //         // Calculate the result: value * (percentage / 100)
+    //         let result = value * (percentage / 100);
+
+    //         // Set the result in the input box
+    //         output.value = result;
+    //     } else {
+    //         // If no '%' is present, evaluate the expression as usual
+    //         output.value = eval(output.value);
+    //     }
+    //     } catch (error) {
+    //     alert('Invalid Expression');
+    // }
+    }
+
+        function clearInput(){
+            output.value = "";
+        }
+
+        function del(){
+            output.value = output.value.slice(0,-1);
+        }
+
+        // function calculatePercentage() {
+        //     // Extract the current value from the input box
+        //     let currentValue = parseFloat(output.value);
+
+        //     // If the current value is a number, calculate the percentage
+        //     if (!isNaN(currentValue)) {
+        //         output.value = currentValue * 0.01;
+        //     }
+        // }
+
+    </script>
+    
+</body>
+</html>

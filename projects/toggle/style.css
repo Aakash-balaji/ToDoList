@@ -1,0 +1,183 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: #f4f4f4;
+}
+
+body.body-dark{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(207, 246, 240);
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50;
+    min-width: 100%;
+    z-index: 1000;
+    padding: 20px 8rem;
+    /* margin: 10px 0; */
+}
+
+nav.nav-dark{
+    background-color: rgb(43, 57, 55);
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#hamburgerBtn {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* ///////////////////////////////////// */
+.cars{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 100px 8rem;
+    
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    gap: 20px;
+
+}
+
+.items p{
+    width: 25rem;
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 30px;
+    
+}
+
+.items h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.cars div img{
+    height: 400px;
+    width: 450px;
+    border-radius: 10px;
+
+}
+
+
+/* toggle button made using div */
+.toggle-con{
+    /* width: 80px;
+    height: 40px; */
+    width: 45px;
+    height: 25px;
+    border-radius: 40px;
+    background-color: #1c222c;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    position: relative;
+}
+
+.toggle-con.dark{
+    background-color: #9ca6ba;
+}
+
+.toggle-item{
+    /* width: 35px;
+    height: 35px; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #555555;
+  
+}
+
+.toggle-item.right{
+    background-color: rgb(236, 237, 238);
+    position: absolute;
+    right: 0;
+    margin: 3px;
+}
+
+@media screen and (max-width: 750px) {
+    nav {
+        padding: 0 4rem;
+    }
+
+    .items{
+        flex-direction: column;
+    }
+    .cars div img{
+        height: 300px;
+        width: 350px;
+        border-radius: 10px;
+    
+    }
+}
+
+@media screen and (max-width: 950px){
+    .cars div img{
+        height: 300px;
+        width: 350px;
+        border-radius: 10px;
+    
+    }
+}
+
+@media screen and (max-width: 530px) {
+    nav {
+        padding: 0 2rem; /* Adjusted padding for smaller screens */
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        /* background-color: #333; */
+        padding: 10px;
+    }
+
+    .nav-items.show {
+        display: flex;
+    }
+
+    #hamburgerBtn {
+        display: block;
+        font-size: 20px;
+        color: #333;
+    }
+
+    
+}

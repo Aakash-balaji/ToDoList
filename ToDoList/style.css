@@ -1,0 +1,64 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* for the main container  */
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10rem;
+    gap: 20px;
+}
+
+.con{
+    background-color: #b5d8dd;
+    height: 20vh;
+    padding: 30px;
+}
+.task-con{
+    background-color: #3fdcff;
+    min-width: 60%;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* for the heading  */
+.task-con h2{
+    text-align: center;
+    font-size: 30px;
+
+}
+
+/* this is for the tasks  */
+#task-container li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.checked{
+    text-decoration: line-through;
+
+}
+
+@media screen and (max-width:740px) {
+    .container{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .container{
+        padding: 20px 5rem;
+    }
+
+}
+
+@media screen and (max-width:410px) {
+    .container{
+        padding: 20px 2rem;
+    }
+
+}

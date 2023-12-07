@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .but div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px 20px;
+            /* margin: 90px 400px; */
+            background-color: #c64b4b;
+            color: aliceblue;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+       div th,td{
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+       }
+
+       .data{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
+       }
+       .but{
+        display: flex;
+        justify-content: space-evenly;
+       }
+       .total{
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+       }
+
+    </style>
+</head>
+<body>
+
+    <div class="but">
+        <div><h2>For all the countrys</h2><button class="forData">click</button></div>
+        <div><h2>largest countries by area</h2><button class="area">click</button></div>
+        <div><h2>total number of languages</h2><button class="forTotal">click</button></div>
+    </div>
+
+    <div class="data">
+        <div class="apiData">
+    
+
+        </div>
+        <div class="largCoun">
+
+        </div>
+        <div class="total">
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

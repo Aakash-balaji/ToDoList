@@ -1,0 +1,10 @@
+.con{
+  height: 100vh;
+  width: 100vw;
+  background-color: #3c5e6b;
+}
+
+
+.con.one{
+  background-color: #ff8e8e;
+}

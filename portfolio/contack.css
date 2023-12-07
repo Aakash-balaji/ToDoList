@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Manrope', sans-serif; */
+
+}
+
+/* nav{
+    background-color: #f4f4f4;
+} */
+
+h2{
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+form{
+    height: 100vh;
+    margin-top: 50px;
+}
+
+#name{
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Reset some default styles and set the base font-family */
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4; /* Set a background color for the body */
+    color: #333; /* Set a default text color */
+}
+
+
+main.about {
+    padding: 20px;
+    margin-top: 70px; /* Adjusted margin to prevent content from being hidden behind the fixed navbar */
+}
+
+h2 {
+    color: #333; /* Set heading color */
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #333; /* Set a background color for the footer */
+    color: #fff; /* Set the text color for the footer */
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #fff; /* Set the link color in the footer */
+}
+
+/* Add media query for responsiveness */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main.about {
+        margin-top: 50px; /* Adjusted margin for smaller screens */
+    }
+}

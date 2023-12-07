@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sai</title>
+    <style>
+        .nam{
+            display: flex;
+            align-items: center;
+            gap:0.5vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="print"></div>
+</body>
+<script >
+    document.addEventListener("DOMContentLoaded",function(){
+        const urlParams = new URLSearchParams(window.location.search);
+        const imdbID = urlParams.get('imdbID');
+        console.log('IMDb-ID:',imdbID);
+
+        let b=fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=b471ad93`)
+        .then((data)=>data.json())
+        .then((data)=>console.log(data))
+    // let name=document.querySelector(".print")
+    // let p=document.createElement("div")
+    // p.innerHTML=`<img src="${selectedMovies.Poster} alt="movie Name" class="poster">
+    //         <div class="nam"><h3>Name:</h2><p>${selectedMovies.Title}</p></div>
+    //         <div class="nam"><h3>Type:</h2><p>${selectedMovies.Type}</p></div>
+    //         <div class="nam"><h3>Year:</h2><p>${selectedMovies.Year}</p></div>
+    //         <div class="nam"><h3>imdbid:</h2><p>${selectedMovies.imdbID}</p></div>`
+    //         name.appendChild(p)
+    })
+
+</script>
+</html>
